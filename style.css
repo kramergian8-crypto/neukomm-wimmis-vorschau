@@ -458,3 +458,6 @@ html.sommer [data-s=sommer]{display:block}
 .pause{background:var(--ink);color:#fff;padding:56px 0 64px}
 .pause .lead{color:#fff;max-width:640px}
 .pause h2.d{font-size:clamp(40px,8vw,72px);margin:6px 0 14px}
+/* Sommer: Vermietung und Service bleiben abrufbar, aber ohne grosse Bilder */
+html.sommer #vermietung .banner,html.sommer #service .banner{display:none}
+html.sommer #vermietung,html.sommer #service{padding-top:24px}

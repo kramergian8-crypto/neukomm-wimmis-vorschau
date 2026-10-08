@@ -30,9 +30,11 @@ So ändern Sie ein Datum:
 Was die Webseite von selbst macht (Sie müssen nichts tun)
   - Vom 15. September bis 7. Mai steht der Winter (Ski, Vermietung, Service,
     Öffnungszeiten) zuerst. Danach stehen die Bodenbeläge zuerst.
-  - Im Sommer verschwinden alle Winter-Teile (Saisonstart, Vermietung,
-    Skitest, Service, Winter-Öffnungszeiten). Stattdessen erscheint der
-    Hinweis "Sommerpause" mit den Daten, wann das Sportgeschäft wieder öffnet.
+  - Im Sommer verschwinden nur der Winter-Banner mit Saisonstart, der Skitest
+    und die Winter-Öffnungszeiten. Stattdessen erscheint der Hinweis
+    "Sommerpause" mit den Daten, wann das Sportgeschäft wieder öffnet.
+    Vermietung (Preise) und Ski & Boardservice bleiben das ganze Jahr
+    abrufbar, nur ohne grosse Bilder und weiter unten.
   - Die Jahreszahlen in den Daten (Saisonstart, Saisonende, "Winter 26/27")
     rücken jedes Jahr automatisch ein Jahr weiter. Es steht nie ein altes
     Datum auf der Seite. Tag und Monat bleiben, wie in daten.txt eingetragen.
