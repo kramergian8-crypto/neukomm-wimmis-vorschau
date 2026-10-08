@@ -21,6 +21,8 @@ sommer_von: 13. Mai 2026
 # Mittwoch: In welchen Monaten gelten die verkürzten Zeiten?
 mittwoch_monate: Oktober / November
 
+# Die Jahreszahlen rücken von selbst weiter. Tag und Monat werden hier eingestellt.
+
 # Automatische Umschaltung der Reihenfolge auf der Webseite.
 # Ab diesem Datum erscheint zuerst der Skiteil (Format: Tag.Monat.)
 umschalten_ski: 15.9.

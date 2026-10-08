@@ -271,7 +271,7 @@ html.sommer:not(.sorted) .sw>[data-g=boden]{order:-1}
 .ticker{background:var(--red);overflow:hidden;white-space:nowrap;border-block:1px solid rgba(255,255,255,.15)}
 .ticker .tr{display:inline-flex;animation:tick 38s linear infinite}
 .ticker span{font:400 24px/1 Anton,"Arial Narrow",Impact,sans-serif;text-transform:uppercase;letter-spacing:.01em;padding:14px 0}
-.ticker span::after{content:"✳";display:inline-block;margin:0 22px;font-family:Helvetica,Arial,sans-serif;font-size:.8em;vertical-align:.08em}
+.ticker span::after{content:"";display:inline-block;width:.3em;height:.3em;border-radius:50%;background:currentColor;margin:0 26px;vertical-align:.18em}
 @keyframes tick{to{transform:translateX(-50%)}}
 .w-g{display:grid;gap:40px;padding-top:56px;padding-bottom:72px;align-items:center}
 .winter .eyebrow{color:#fff;opacity:.8}
@@ -450,3 +450,11 @@ html.sommer:not(.sorted) .sw>[data-g=boden]{order:-1}
 @keyframes lane{to{transform:translateX(calc(-50% - 6px))}}
 @media (max-width:759px){.lt a{width:128px;padding:10px}.lt{animation-duration:70s}.lanes{margin-right:calc(var(--pad)*-1);margin-top:20px}}
 @media (prefers-reduced-motion:reduce){.lane{overflow-x:auto}.lt{animation:none}}
+
+/* Saison: Winter-Teile im Sommer weg, Sommerpause nur im Sommer */
+html.sommer [data-s=winter]{display:none!important}
+[data-s=sommer]{display:none}
+html.sommer [data-s=sommer]{display:block}
+.pause{background:var(--ink);color:#fff;padding:56px 0 64px}
+.pause .lead{color:#fff;max-width:640px}
+.pause h2.d{font-size:clamp(40px,8vw,72px);margin:6px 0 14px}

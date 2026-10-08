@@ -13,7 +13,29 @@ function heute(){
  var n=new Date();
  return ('0'+(n.getMonth()+1)).slice(-2)+'-'+('0'+n.getDate()).slice(-2);
 }
-var DATEN={};
+var DATEN={saisonstart:'5. Oktober 2026',saisonende:'7. Mai 2027',winter:'Winter 26/27',jahr:'2026',sommer_von:'13. Mai 2026'};
+var MON=['januar','februar','märz','april','mai','juni','juli','august','september','oktober','november','dezember'];
+function pd(s){var r=(s||'').match(/(\d{1,2})\.\s*([A-Za-zäÄ]+)\s*(\d{4})/);if(!r)return null;var m=MON.indexOf(r[2].toLowerCase());return m<0?null:{d:+r[1],m:m,y:+r[3]}}
+function fd(o,y){return o.d+'. '+MON[o.m].charAt(0).toUpperCase()+MON[o.m].slice(1)+' '+y}
+function p2(n){n=n%100;return (n<10?'0':'')+n}
+/* Jahre automatisch weiterschieben, damit nie ein altes Datum steht */
+function datumAuto(){
+ var S=pd(DATEN.saisonstart),E=pd(DATEN.saisonende),V=pd(DATEN.sommer_von);if(!S||!E)return;
+ var n=new Date(),now=new Date(n.getFullYear(),n.getMonth(),n.getDate()),k=0;
+ while(k<50&&new Date(E.y+k,E.m,E.d)<now)k++;
+ var sy=S.y+k,ey=E.y+k;
+ DATEN.saisonstart=fd(S,sy);DATEN.saisonende=fd(E,ey);
+ if(/^\d{4}$/.test(DATEN.jahr||''))DATEN.jahr=String(+DATEN.jahr+k);
+ DATEN.winter=(DATEN.winter||'').replace(/(\d\d)\/(\d\d)/,function(a,x,y){return p2(+x+k)+'/'+p2(+y+k)});
+ var sy2=new Date(sy,S.m,S.d)>now?sy:ey;
+ DATEN.saisonstart_t=fd(S,sy2);
+ if(V)DATEN.sommer_von_t=fd(V,sy2);
+}
+function render(){
+ datumAuto();
+ document.querySelectorAll('[data-d]').forEach(function(e){var v=DATEN[e.getAttribute('data-d')];if(v)e.textContent=v});
+ applySeason();
+}
 function winterJetzt(){
  var q=(location.search.match(/[?&]saison=(sommer|winter)/)||[])[1];
  if(q)return q==='winter';
@@ -43,15 +65,14 @@ function datenAnwenden(t){
   var k=l.slice(0,i).trim().toLowerCase(),v=l.slice(i+1).trim();
   if(k&&v)DATEN[k]=v;
  });
- document.querySelectorAll('[data-d]').forEach(function(e){var v=DATEN[e.getAttribute('data-d')];if(v)e.textContent=v});
  if(md(DATEN.umschalten_ski))SAISON.start=md(DATEN.umschalten_ski);
  if(md(DATEN.umschalten_boden))SAISON.ende=md(DATEN.umschalten_boden);
- applySeason();
+ render();
 }
 
 document.documentElement.classList.toggle('sommer',!winterJetzt());
 document.addEventListener('DOMContentLoaded',function(){
-applySeason();
+render();
 if(innerWidth<760)document.querySelectorAll('details.acc').forEach(function(d){d.open=false});
 if(window.fetch&&location.protocol!=='file:')fetch('daten.txt?'+Date.now()).then(function(r){return r.ok?r.text():''}).then(function(t){if(t)datenAnwenden(t)}).catch(function(){});
 var b=document.body,m=document.getElementById('menu'),o=document.getElementById('mopen');

@@ -27,10 +27,29 @@ So ändern Sie ein Datum:
        (Oder: "Add file" > "Upload files" und die neue daten.txt hochladen.)
   6. Nach 1 bis 2 Minuten ist die Webseite aktualisiert.
 
-Automatische Umschaltung
-  Die Webseite zeigt von selbst zuerst den Skiteil (ab "umschalten_ski") und
-  nach der Saison (ab "umschalten_boden") zuerst die Bodenbeläge.
-  Datumsformat: Tag.Monat. zum Beispiel 15.9. oder 7.5.
+Was die Webseite von selbst macht (Sie müssen nichts tun)
+  - Vom 15. September bis 7. Mai steht der Winter (Ski, Vermietung, Service,
+    Öffnungszeiten) zuerst. Danach stehen die Bodenbeläge zuerst.
+  - Im Sommer verschwinden alle Winter-Teile (Saisonstart, Vermietung,
+    Skitest, Service, Winter-Öffnungszeiten). Stattdessen erscheint der
+    Hinweis "Sommerpause" mit den Daten, wann das Sportgeschäft wieder öffnet.
+  - Die Jahreszahlen in den Daten (Saisonstart, Saisonende, "Winter 26/27")
+    rücken jedes Jahr automatisch ein Jahr weiter. Es steht nie ein altes
+    Datum auf der Seite. Tag und Monat bleiben, wie in daten.txt eingetragen.
+  - Das Datum der Umschaltung stellen Sie bei "umschalten_ski" und
+    "umschalten_boden" ein (Format Tag.Monat., zum Beispiel 15.9. oder 7.5.).
+  Ändert sich einmal der Tag oder Monat (zum Beispiel neuer Saisonstart am
+  12. Oktober), dann nur die Zeile in daten.txt anpassen.
+
+Flyer, Bilder und PDF austauschen
+  - Der Flyer ist ein Bild (Datei auf der Seite) und ein Link auf das PDF.
+  - Neues PDF: Auf GitHub in das Projekt gehen, "Add file", "Upload files",
+    das neue PDF hineinziehen und "Commit changes" klicken.
+    Der Link zum Flyer bleibt gleich, wenn die Datei gleich heisst.
+  - Bild austauschen: neue Datei mit genau demselben Dateinamen hochladen,
+    sie ersetzt die alte.
+  - Für alles andere (neue Texte, neue Bereiche) wenden Sie sich bitte an
+    die Person, die Ihnen die Webseite geliefert hat.
 
 Wichtig
   - Die Datei muss "daten.txt" heissen und neben "index.html" liegen.
