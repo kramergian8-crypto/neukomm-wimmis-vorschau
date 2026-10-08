@@ -1,0 +1,48 @@
+ANLEITUNG: Daten auf der Webseite selbst ändern
+===============================================
+
+Sie brauchen keine Programmierkenntnisse.
+
+Welche Datei?
+  Die Datei "daten.txt". Hier stehen alle Daten, die sich jedes Jahr ändern
+  (Saisonstart, Saisonende, Jahr, Sommerpause, Mittwochs-Zeiten).
+
+Was ist mit Word?
+  Eine Word-Datei kann eine Webseite leider nicht direkt lesen. Darum gibt es
+  die einfache Textdatei "daten.txt". Sie funktioniert wie ein sehr einfaches
+  Word: einfach Text ändern, speichern, fertig.
+
+So ändern Sie ein Datum:
+  1. Öffnen Sie "daten.txt" mit dem Editor (Windows) oder TextEdit (Mac).
+     Ein Doppelklick genügt meistens.
+  2. Ändern Sie nur den Text NACH dem Doppelpunkt.
+     Beispiel:   saisonstart: 5. Oktober 2026
+     wird zu:    saisonstart: 6. Oktober 2027
+  3. Den Namen vor dem Doppelpunkt (z. B. "saisonstart") NICHT ändern.
+  4. Speichern.
+  5. Die Datei auf GitHub ersetzen:
+       - GitHub öffnen und in das Projekt gehen
+       - Auf "daten.txt" klicken, dann auf das Stift-Symbol (Bearbeiten)
+       - Text ändern und unten auf "Commit changes" klicken
+       (Oder: "Add file" > "Upload files" und die neue daten.txt hochladen.)
+  6. Nach 1 bis 2 Minuten ist die Webseite aktualisiert.
+
+Automatische Umschaltung
+  Die Webseite zeigt von selbst zuerst den Skiteil (ab "umschalten_ski") und
+  nach der Saison (ab "umschalten_boden") zuerst die Bodenbeläge.
+  Datumsformat: Tag.Monat. zum Beispiel 15.9. oder 7.5.
+
+Wichtig
+  - Die Datei muss "daten.txt" heissen und neben "index.html" liegen.
+  - Dies funktioniert, sobald die Webseite online ist (z. B. GitHub Pages).
+    Beim Öffnen von index.html per Doppelklick auf dem Computer werden die
+    Standardtexte angezeigt.
+  - Wenn eine Zeile fehlt oder falsch ist, bleibt der bisherige Text stehen.
+    Es geht also nichts kaputt.
+
+Kontaktformular
+  Nachrichten kommen per E-Mail an neukomm-wimmis@bluewin.ch.
+  Beim allerersten Absenden schickt der Dienst (FormSubmit) eine
+  Bestätigungs-E-Mail an diese Adresse. Bitte darin einmalig auf den
+  Bestätigungs-Link klicken. Danach kommen alle Nachrichten automatisch an.
+  (Auch den Spam-Ordner prüfen.)

@@ -1,0 +1,28 @@
+# DATEN-DATEI Neukomm Wimmis
+# Hier stehen alle Texte, die sich jedes Jahr ändern.
+# Bitte nur den Text NACH dem Doppelpunkt ändern. Der Name VOR dem Doppelpunkt darf nicht geändert werden.
+# Zeilen mit # am Anfang sind nur Hinweise und werden ignoriert.
+
+# Beginn der Wintersaison (Saisonstart Miete)
+saisonstart: 5. Oktober 2026
+
+# Ende der Wintersaison
+saisonende: 7. Mai 2027
+
+# Winter-Bezeichnung (steht im Lauftext)
+winter: Winter 26/27
+
+# Jahr (steht gross in der Überschrift "Start in den Winter")
+jahr: 2026
+
+# Sommer-Pause: Beginn (Ende ist der Saisonstart)
+sommer_von: 13. Mai 2026
+
+# Mittwoch: In welchen Monaten gelten die verkürzten Zeiten?
+mittwoch_monate: Oktober / November
+
+# Automatische Umschaltung der Reihenfolge auf der Webseite.
+# Ab diesem Datum erscheint zuerst der Skiteil (Format: Tag.Monat.)
+umschalten_ski: 15.9.
+# Ab diesem Datum erscheinen zuerst die Bodenbeläge
+umschalten_boden: 7.5.
