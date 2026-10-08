@@ -106,7 +106,7 @@ html.sommer:not(.sorted) .sw>[data-g=boden]{order:-1}
 .banner{position:relative;overflow:hidden;background:var(--ink)}
 .banner img{width:100%;aspect-ratio:3/2;object-fit:cover}
 .banner.snow img{aspect-ratio:16/10;object-position:62% 50%}
-.bhead{padding:32px 0 0}
+.bhead{padding-top:32px;padding-bottom:0}
 
 /* Floor tiles */
 .floors{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:32px}
@@ -386,6 +386,11 @@ html.sommer:not(.sorted) .sw>[data-g=boden]{order:-1}
  .banner img{aspect-ratio:2/1}
  .banner.snow img{aspect-ratio:16/10}
  .bhead{padding-top:22px}
+ .grid-t>*,.two>*,.split>*,.dl>*{min-width:0}
+ .acc{min-width:0;max-width:100%}
+ .hours-in{margin-left:auto;margin-right:auto;width:100%}
+ .tbl{table-layout:auto}
+ .tbl thead th{padding-right:8px;font-size:13px}
  .media.r43{aspect-ratio:16/9}
  .two{gap:20px}
  /* Wischbare Reihen */
